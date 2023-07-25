@@ -12,3 +12,17 @@ C:\Users\Admin\source\repos\AdminAPI\Admin.Domain\obj\Debug\net6.0\refint\Admin.
 C:\Users\Admin\source\repos\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.pdb
 C:\Users\Admin\source\repos\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.genruntimeconfig.cache
 C:\Users\Admin\source\repos\AdminAPI\Admin.Domain\obj\Debug\net6.0\ref\Admin.Domain.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\bin\Debug\net6.0\Admin.Domain.deps.json
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\bin\Debug\net6.0\Admin.Domain.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\bin\Debug\net6.0\Admin.Domain.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\bin\Debug\net6.0\Admin.Domain.pdb
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\refint\Admin.Domain.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.pdb
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\Admin.Domain.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\Admin.Domain\obj\Debug\net6.0\ref\Admin.Domain.dll

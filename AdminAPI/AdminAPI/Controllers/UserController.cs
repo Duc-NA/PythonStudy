@@ -12,20 +12,17 @@ namespace AdminAPI.Controllers
     public class UserController : ControllerBase
     {
         private IUserServices _userService;
-        private readonly UserManager<User> _userManager;
-        private readonly RoleManager<CustomRole> _roleManager;
+        private readonly UserManager<User> _userManager;        
         private readonly IConfiguration _configuration;
 
         public UserController(
             UserServices userService,
-            UserManager<User> userManager,
-            RoleManager<CustomRole> roleManager,
+            UserManager<User> userManager,            
             IConfiguration configuration            
             )
         {
             _userService = userService;            
-            _userManager = userManager;
-            _roleManager = roleManager;
+            _userManager = userManager;        
             _configuration = configuration;
         }
 

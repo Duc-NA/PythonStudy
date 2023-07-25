@@ -3438,11 +3438,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Application\\Admin.Application.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Application\\Admin.Application.csproj",
       "projectName": "Admin.Application",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Application\\Admin.Application.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Application\\Admin.Application.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Application\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3459,8 +3459,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj"
+            "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj"
             }
           }
         }

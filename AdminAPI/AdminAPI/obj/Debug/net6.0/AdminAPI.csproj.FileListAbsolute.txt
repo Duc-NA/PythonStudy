@@ -88,3 +88,13 @@ C:\Users\Admin\source\repos\AdminAPI\AdminAPI\obj\Debug\net6.0\refint\AdminAPI.d
 C:\Users\Admin\source\repos\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.pdb
 C:\Users\Admin\source\repos\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.genruntimeconfig.cache
 C:\Users\Admin\source\repos\AdminAPI\AdminAPI\obj\Debug\net6.0\ref\AdminAPI.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\refint\AdminAPI.dll
+C:\Users\Admin\Documents\GitHub\BaseProject\AdminAPI\AdminAPI\obj\Debug\net6.0\AdminAPI.pdb

@@ -3420,11 +3420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj",
       "projectName": "Admin.Repository",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Repository\\Admin.Repository.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Repository\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3441,8 +3441,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Domain\\Admin.Domain.csproj": {
-              "projectPath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\Admin.Domain\\Admin.Domain.csproj"
+            "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Domain\\Admin.Domain.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\Admin.Domain\\Admin.Domain.csproj"
             }
           }
         }

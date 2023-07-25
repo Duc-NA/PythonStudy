@@ -2,6 +2,7 @@
 using Admin.Application.Models;
 using Admin.Domain.Models;
 using Admin.Repository.Interfaces;
+using Admin.Repository.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;

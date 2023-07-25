@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "02AP9kPckfbmptOOJoPNGlQUIpoX2vnu8xpJet4gfFcMyTLPvj6T8pXUcMd53B2CncQxYMvApyCOyHZLoJ80FA==",
+  "dgSpecHash": "ppnVAwjKez97uOQ0O/2hA5OZCmCj8es+0nB04RLtadskfqqYgeRVR/f4NR+6qTCIMywXPQ+Nq0hhg6YUBu0JKw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\AdminAPI\\AdminAPI\\AdminAPI.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GitHub\\BaseProject\\AdminAPI\\AdminAPI\\AdminAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
