@@ -362,6 +362,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # obj bin
-/obj/
-/bin/
-AdminAPI/.vs
+AdminAPI/.vs/
+.vscode/
+AdminAPI/Admin.Application/bin/
+AdminAPI/Admin.Application/obj/
