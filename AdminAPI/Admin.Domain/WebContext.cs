@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Admin.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Admin.Domain
 {
@@ -18,18 +19,29 @@ namespace Admin.Domain
     }
     public class WebContext : IdentityDbContext<User, CustomRole, int>
     {
-        public WebContext()
+        protected readonly IConfiguration Configuration;
+        public WebContext(){}
+
+        public WebContext(
+            DbContextOptions<WebContext> options,
+            IConfiguration configuration
+            ) : base(options)
         {
+            Configuration = configuration;
         }
 
-        public WebContext(DbContextOptions<WebContext> options) : base(options)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-
+            // connect to sql server database
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
         }
+
         public DbSet<User> User { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);            
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<User>()
+               .ToTable("AspNetUsers", t => t.ExcludeFromMigrations());
         }
     }
 }

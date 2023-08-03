@@ -1,6 +1,11 @@
+// module import 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+
+// component
 import { AppComponent } from './app.component';
 import { HomeComponent } from './feature/home/home.component';
 import { LoginComponent } from './feature/login/login.component';
@@ -12,6 +17,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { ErrorComponent } from './shared/alert/error/error.component';
 import { SuccessComponent } from './shared/alert/success/success.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +28,13 @@ import { SuccessComponent } from './shared/alert/success/success.component';
     FooterComponent,
     HeaderComponent,
     RoleComponent,
-    ErrorComponent,
+    ErrorComponent,    
     SuccessComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

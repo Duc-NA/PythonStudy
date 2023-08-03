@@ -8,30 +8,30 @@ const USER_KEY = 'auth-user';
 export class StorageService {
   constructor() {}
 
-  // clean(): void {
-  //   window.sessionStorage.clear();
-  // }
+  clean(): void {
+    window.sessionStorage.clear();
+  }
 
-  // public saveUser(user: any): void {
-  //   window.sessionStorage.removeItem(USER_KEY);
-  //   window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
-  // }
+  public saveUser(user: any): void {
+    window.sessionStorage.removeItem(USER_KEY);
+    window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+  }
 
-  // public getUser(): any {
-  //   const user = window.sessionStorage.getItem(USER_KEY);
-  //   if (user) {
-  //     return JSON.parse(user);
-  //   }
+  public getUser(): any {
+    const user = window.sessionStorage.getItem(USER_KEY);
+    if (user) {
+      return JSON.parse(user);
+    }
 
-  //   return {};
-  // }
+    return {};
+  }
 
-  // public isLoggedIn(): boolean {
-  //   const user = window.sessionStorage.getItem(USER_KEY);
-  //   if (user) {
-  //     return true;
-  //   }
+  public isLoggedIn(): boolean {
+    const user = window.sessionStorage.getItem(USER_KEY);
+    if (user) {
+      return true;
+    }
 
-  //   return false;
-  // }
+    return false;
+  }
 }

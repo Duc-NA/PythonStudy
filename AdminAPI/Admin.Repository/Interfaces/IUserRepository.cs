@@ -11,5 +11,7 @@ namespace Admin.Repository.Interfaces
     {
         Task<bool> Login(string mobile, string password);        
         Task<bool> Register(User user);
+        User GetById(int id);
+        bool GetByUserName(string userName);
     }
 }

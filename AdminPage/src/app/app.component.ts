@@ -8,5 +8,5 @@ import { StorageService } from '@app/core/services/storage.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'AdminPage';
+ 
 }

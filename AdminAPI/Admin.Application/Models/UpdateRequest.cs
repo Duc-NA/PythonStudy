@@ -1,19 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Admin.Application.Models
 {
-    public class RegisterModel
+    public class UpdateRequest
     {
-        [Required]
         public string FirstName { get; set; }
-
-        [Required]
         public string LastName { get; set; }
-
-        [Required]
         public string Username { get; set; }
-
-        [Required]
         public string Password { get; set; }
     }
 }

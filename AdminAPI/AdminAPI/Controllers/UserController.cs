@@ -6,26 +6,22 @@ using Microsoft.AspNetCore.Mvc;
 using Admin.Application.Models;
 using Admin.Domain;
 using Admin.Domain.Models;
+using AutoMapper;
 
 namespace AdminAPI.Controllers
 {
     public class UserController : ControllerBase
     {
-        private IUserServices _userService;
-        private readonly UserManager<User> _userManager;        
-        private readonly IConfiguration _configuration;
+        private IUserServices _userService;        
 
         public UserController(
-            UserServices userService,
-            UserManager<User> userManager,            
-            IConfiguration configuration            
+            IUserServices userService
             )
-        {
-            _userService = userService;            
-            _userManager = userManager;        
-            _configuration = configuration;
+        {   
+            _userService = userService;
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login(LoginModel model)
         {
@@ -37,16 +33,29 @@ namespace AdminAPI.Controllers
             return Ok(response);
         }
 
+        [AllowAnonymous]
         [HttpPost(" register")]
         public IActionResult Register(RegisterModel model)
         {
-            //var response = _userService.Register(model);
-            var response = 123;
+            var response = _userService.Register(model);
+            
             if (response == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
 
             return Ok(response);
         }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var users = _userService.GetAll();
+            return Ok(users);
+        }
 
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
+        {
+            var user = _userService.GetById(id);
+            return Ok(user);
+        }
     }
 }

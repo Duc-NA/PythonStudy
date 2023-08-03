@@ -1,8 +1,11 @@
-﻿using Admin.Application.Interfaces;
+﻿using Admin.Application.Exceptions;
+using Admin.Application.Interfaces;
 using Admin.Application.Models;
 using Admin.Domain.Models;
 using Admin.Repository.Interfaces;
 using Admin.Repository.Models;
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -19,13 +22,16 @@ namespace Admin.Application.Services
     {
         private readonly AppSettings _appSettings;
         private readonly IUserRepository _userRepository;
+        private readonly IMapper _mapper;
         public UserServices(
             IOptions<AppSettings> appSettings,
+            IMapper mapper,
             IUserRepository userRepository
             )
         {
             _appSettings = appSettings.Value;
             _userRepository = userRepository;
+            _mapper = mapper;
         }
 
 
@@ -34,9 +40,16 @@ namespace Admin.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<bool> Register(User user)
+        public Task<bool> Register(RegisterModel user)
         {
-            throw new NotImplementedException();
+            // get user by user name
+            if (_userRepository.GetByUserName(user.Username)) 
+            {
+                throw new AppException("Username '" + user.Username + "' is already taken");
+            }
+
+            var userAdd = _mapper.Map<User>(user);
+            return _userRepository.Register(userAdd);
         }
 
         public AuthenticateResponse Authenticate(LoginModel model)
@@ -62,6 +75,27 @@ namespace Admin.Application.Services
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+        }
+
+        public AuthenticateResponse Authenticate(AuthenticateRequest model)
+        {
+            // get user id with identity
+
+            // generate token
+            var token = generateJwtToken(123);
+            //login with identity            
+            var result = new AuthenticateResponse();
+            return result;
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public User GetById(int id)
+        {
+            return _userRepository.GetById(id);
         }
     }
 }
