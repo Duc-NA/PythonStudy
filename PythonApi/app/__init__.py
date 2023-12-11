@@ -2,26 +2,28 @@ from flask import Flask
 from flask_restx import Api
 from .orders.views import order_namespace
 from .auth.views import auth_namespace
+from .users.views import user_namespace
+from .roles.views import role_namespace
 from .config.config import config_dict
 
 
-# from flask_sqlalchemy import SQLAlchemy
-# from flask_bcrypt import Bcrypt
-# from .config import config_by_name
-
-# db = SQLAlchemy()
-# flask_bcrypt = Bcrypt()
+# from .models.users import User
+from .utils import db,ma
 
 def create_app(config=config_dict['dev']):
     app = Flask(__name__)
-    # app.config.from_object(config_by_name[config_name])
-    # db.init_app(app)
-    # flask_bcrypt.init_app(app)
-
     app.config.from_object(config)
+    
+    # MySQL configurations
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:admin123@localhost/baseproject'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db.init_app(app)
+    ma.init_app(app)
+
+    #api config
     api=Api(app)
-
-    api.add_namespace(order_namespace)
-    api.add_namespace(auth_namespace,path='/auth')
-
+    api.add_namespace(order_namespace,path='/api/order')
+    api.add_namespace(auth_namespace,path='/api/auth')
+    api.add_namespace(user_namespace,path='/api/user')
+    api.add_namespace(role_namespace,path='/api/role')
     return app
