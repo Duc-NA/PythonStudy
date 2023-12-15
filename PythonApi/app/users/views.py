@@ -4,6 +4,7 @@ from werkzeug.security import generate_password_hash
 from http import HTTPStatus
 from flask import jsonify, request, abort,make_response,json
 from ..utils import db 
+from flask_jwt_extended import jwt_required
 
 user_namespace=Namespace('users', description="a namspace for user")
 
@@ -16,8 +17,11 @@ user_dto=user_namespace.model(
     }
 )
 
+
+
 @user_namespace.route('/users')
 class GetUpdateDelete(Resource):
+    @jwt_required()
     def get(self):
         """
             Retrieve list user
@@ -25,10 +29,11 @@ class GetUpdateDelete(Resource):
         users = User.query.all()
         user_schema = UserSchema(many=True)
         data = user_schema.dump(users)
-        return data
+        return data ,HTTPStatus.OK
         
     @user_namespace.expect(user_dto)
     @user_namespace.marshal_with(user_dto)
+    @jwt_required()
     def put(self):
         """
             Update an user with id
@@ -46,6 +51,7 @@ class GetUpdateDelete(Resource):
 
     @user_namespace.expect(user_dto)
     @user_namespace.marshal_with(user_dto)
+    @jwt_required()
     def post(self):
         """
             create an new user with id
@@ -61,6 +67,7 @@ class GetUpdateDelete(Resource):
 
 @user_namespace.route("/users/<userId>")
 class GetListUser(Resource):
+    @jwt_required()
     def get(self,userId):
         """
             get user by id
@@ -73,7 +80,7 @@ class GetListUser(Resource):
             return data,HTTPStatus.OK
         else:
             abort(404, f"User {userId} not found")
-    
+    @jwt_required()
     def delete(self,userId):
         """
             Delete an user with id
