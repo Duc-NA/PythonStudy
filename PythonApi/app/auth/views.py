@@ -17,14 +17,13 @@ signup_model=auth_namespace.model(
 
 login_model=auth_namespace.model(
     'Login',{
-        'UserName': fields.String(required=True,description="A username"),
+        'Email': fields.String(required=True,description="An email"),
         'Password': fields.String(required=True,description="password of username")
     }
 )
 
 @auth_namespace.route('/signup')
 class SignUp(Resource):
-
     @auth_namespace.expect(signup_model)
     @auth_namespace.marshal_with(signup_model)
     def post(self):
@@ -49,19 +48,18 @@ class Login(Resource):
             Generate jwt a pair
         """
         data = request.get_json()
-        userName = data.get('UserName')
+        email = data.get('Email')
         password = data.get('Password')
-        user = User.query.filter_by(UserName=userName).first()
+        user = User.query.filter_by(Email=email).first()
 
         if (user is not None) and check_password_hash(user.Password,password):
-            access_token = create_access_token(identity=user.UserName)
-            refresh_token = create_refresh_token(identity=user.UserName)
+            access_token = create_access_token(identity=user.Email)
+            refresh_token = create_refresh_token(identity=user.Email)
             response = {
                 'access_token' : access_token,
                 'refresh_token':refresh_token
             }
         return response,HTTPStatus.OK
-    
 
 @auth_namespace.route('/refresh')
 class Refresh(Resource):
@@ -70,6 +68,6 @@ class Refresh(Resource):
         """
             Generate jwt a pair
         """
-        username = get_jwt_identity()
-        access_token = create_access_token(identity=username)
+        email = get_jwt_identity()
+        access_token = create_access_token(identity=email)
         return {"access_token" : access_token},HTTPStatus.OK
