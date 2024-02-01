@@ -2,35 +2,23 @@ from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
-
-posts=[
-    {
-        "id": 1,
-        "title": "this is title",
-        "content": "this is content"
-    }
-]
-
-
-@api_view(http_method_names=["GET","POST"])
-def homepage(request:Request):
-
-    if request.method == "POST":
-        data = request.data
-        response={"message": "hello world","data":data}
-        return Response(data=response,status=status.HTTP_201_CREATED)
-    
-    response={"message": "hello world"}
-    return Response(data=response,status=status.HTTP_200_OK)
+from .models import Post
+from .serializers import PostSerializer
+import json
 
 @api_view(http_method_names=["GET"])
-def list_posts(request:Request):
-    return Response(data=posts, status=status.HTTP_200_OK)
+def get(request:Request):
+    queryset = Post.objects.all()
+    read_serializer = PostSerializer(queryset, many=True)
+    return Response(read_serializer.data, status=status.HTTP_200_OK)
 
-
-@api_view(http_method_names=["GET"])
-def post_detail(request:Request,post_id:int):
-    post = posts[post_id]
-    if post:
-        return Response(data=post, status=status.HTTP_200_OK)
-    return Response(data={"error":"post not found"}, status=status.HTTP_404_NOT_FOUND)
+@api_view(http_method_names=["POST"])
+def post(request:Request):
+    data=request.data
+    print(json.dumps(data))
+    create_serializer = PostSerializer(data=data)
+    if create_serializer.is_valid():
+      todo_item_object = create_serializer.save()
+      read_serializer = PostSerializer(todo_item_object)
+      return Response(read_serializer.data, status=status.HTTP_201_CREATED)
+    return Response("", status=status.HTTP_400_BAD_REQUEST)
